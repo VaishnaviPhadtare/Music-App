@@ -1,0 +1,151 @@
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+  height: 110vh;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: linear-gradient(to right, rgb(207, 86, 86),rgb(231, 190, 114),rgb(224, 224, 154),rgb(121, 245, 121),rgb(139, 139, 230),rgb(181, 129, 218),rgb(228, 153, 228));
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: 300%;
+  
+}
+
+.animation{
+  animation: bg-animations 1s infinite alternate;
+}
+
+@keyframes bg-animations {
+  0% {
+    background-position: right;
+  }
+  50% {
+    background-position:50%;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+h1{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:crimson;
+}
+
+.container {
+  display:flex;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 10px 10px 8px 10px #f1eeee;
+    display: flex;
+    padding: 30px 20px;
+    margin: 100px 0;
+    z-index: 10;
+
+}
+.img-container{
+    position: relative;
+    width: 100px;
+}
+
+.info{
+  position: absolute;
+  top: 0;
+  left: 200px;
+  
+}
+h3 {
+  
+  
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  color:rgb(248, 69, 69);
+  
+}
+
+.img-container img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position:absolute;
+    bottom: 0ch;
+    left: 0ch;
+   top: 0ch;
+    margin-right: 50px;
+    animation: rotation 2s linear infinite ;
+    animation-play-state: paused;
+}
+
+.container.play .img-container img{
+    animation-play-state: running;
+}
+
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-left: 70px;
+}
+
+.butt {
+  background-color: white;
+  border: 0;
+  color: rgb(255, 140, 140);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 20px ;
+}
+
+.butt-big {
+    
+    color: rgb(240, 135, 135);
+    font-size: 20px;
+}
+
+.progress-bar{
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 30px 0 50px 0;
+  height: 5px;
+  width: 200px;
+}
+
+.progress {
+  background-color: rgb(240, 135, 135);;
+  border-radius: 5px;
+  height: 100%;
+  transition: width 0.2sec linear;
+}
+
+
+
