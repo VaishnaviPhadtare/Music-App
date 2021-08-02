@@ -20,7 +20,7 @@ loadSong(songs[songIndex])
 function loadSong(song) {
    
     title.innerHTML = `<marquee direction="right" height="20" width="200" bgcolor="white">${song}</marquee>`
-    audio.src = `music/${song}.mp3`;
+    audio.src = `${song}.mp3`;
 }
 
 function playSong(){
